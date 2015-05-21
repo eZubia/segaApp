@@ -1,4 +1,4 @@
-package uach.arquitectura.segaapp;
+package uach.arquitectura.segaapp.models;
 
 import java.sql.ResultSet;
 

@@ -1,4 +1,4 @@
-package uach.arquitectura.segaapp;
+package uach.arquitectura.segaapp.models;
 
 import java.sql.ResultSet;
 
@@ -8,6 +8,7 @@ import java.sql.ResultSet;
  * @since 20/05/2015.
  * @version 1.0
  */
+
 public class Calificacion {
 
     String claveMateria;

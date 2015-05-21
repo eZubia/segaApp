@@ -1,4 +1,4 @@
-package uach.arquitectura.segaapp;
+package uach.arquitectura.segaapp.models;
 
 /**
  * Modelo Alumno el cual permite tener la estructura de un alumno basada en la base de datos.

@@ -1,4 +1,4 @@
-package uach.arquitectura.segaapp;
+package uach.arquitectura.segaapp.models;
 
 /**
  * Modelo Materia para poder mandar la materia a la base de datos y guardarla.

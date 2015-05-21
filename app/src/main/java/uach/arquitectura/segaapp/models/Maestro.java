@@ -1,4 +1,4 @@
-package uach.arquitectura.segaapp;
+package uach.arquitectura.segaapp.models;
 
 /**
  * Modelo Maestro para poder mndarlo a la base de datos y guardarlo.
