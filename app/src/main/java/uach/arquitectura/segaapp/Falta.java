@@ -47,7 +47,7 @@ public class Falta {
      * @param matricula que es la matricula del alumno.
      * @return rs que es un resultset.
      */
-    public static ResultSet getFaltasAlumno(String sql, Integer matricula){
+    public ResultSet getFaltasAlumno(String sql, Integer matricula){
         ResultSet rs = null;
         return rs;
     }
