@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SegaApp</string>
+    <string name="ventana_logIn">LogIn</string>
+
+    <!--- Internacionalizacion de la ventana Login -->
+    <string name="matricula">Matricula</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="action_settings">Settings</string>
+
 </resources>
