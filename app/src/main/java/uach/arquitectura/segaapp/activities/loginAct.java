@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import uach.arquitectura.segaapp.R;
 
-public class loginAct extends ActionBarActivity {
+public class LoginAct extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class loginAct extends ActionBarActivity {
 
                 if( Matricula.equals("admin") && Contrasenia.equals("admin"))
                 {
-                    Intent OpenMenu = new Intent(loginAct.this,MenuAct.class);
+                    Intent OpenMenu = new Intent(LoginAct.this,MenuAct.class);
                     startActivity(OpenMenu);
                 }
                 else
