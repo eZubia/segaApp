@@ -125,8 +125,21 @@ public class MenuAct extends ActionBarActivity implements ActionBar.TabListener 
 
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
+            switch(position){
+
+                case 0:{
+                    return new fragment_horario();
+
+                }
+                case 1:{
+                    return new fragment_faltas();
+                }
+
+                case 2:{
+                    return new fragment_calificaciones();
+                }
+            }
+
             return PlaceholderFragment.newInstance(position + 1);
         }
 
@@ -174,14 +187,9 @@ public class MenuAct extends ActionBarActivity implements ActionBar.TabListener 
         }
 
         public PlaceholderFragment() {
+
         }
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_horario, container, false);
-            return rootView;
-        }
     }
 
 }
