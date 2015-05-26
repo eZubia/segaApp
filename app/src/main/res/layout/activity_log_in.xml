@@ -26,8 +26,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtMatricula"
-            android:text="admin" />
+            android:id="@+id/txtMatricula" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,12 +41,11 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtContrasena"
-            android:layout_gravity="center_horizontal"
-            android:text="admin"
+            android:inputType="textPassword"
             android:textAlignment="center"
-
-            />
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:id="@+id/txtContrasena" />
 
         <Button
             android:layout_width="wrap_content"
@@ -57,6 +55,8 @@
             android:layout_gravity="center_horizontal"
             android:background="#FFFFD54F"
             />
+
+
 
     </LinearLayout>
 

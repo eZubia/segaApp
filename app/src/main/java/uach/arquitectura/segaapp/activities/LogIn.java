@@ -1,15 +1,15 @@
-package uach.arquitectura.segaapp.views;
+package uach.arquitectura.segaapp.activities;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -35,8 +35,16 @@ public class LogIn extends ActionBarActivity {
             @Override
             public void onClick(View view) {
 
-                Boolean b = verificarUsuario(texMatricula.getText().toString(), textContrasena.getText().toString());
-                System.out.println(b);
+
+                try{
+                    Boolean b = verificarUsuario(texMatricula.getText().toString(), textContrasena.getText().toString());
+                    if(b) {
+                    Intent OpenMenu = new Intent(LogIn.this, MenuAct.class);
+                    startActivity(OpenMenu);
+                    }
+                }catch(NullPointerException e){
+                    Toast.makeText(getApplicationContext(), "Error de identificacion", Toast.LENGTH_LONG).show();
+                }
 
             }
         });
