@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">SegaApp</string>
+    <string name="title_activity_login">Acceso</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">Menu</string>
+
+    <string name="title_section1">Horario</string>
+    <string name="title_section2">Calificaciones</string>
+    <string name="title_section3">Faltas</string>
+    <string name="title_activity_horario_dia">HorarioDiaAct</string>
 </resources>
