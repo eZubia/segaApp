@@ -10,13 +10,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
 
 import uach.arquitectura.segaapp.R;
+import uach.arquitectura.segaapp.activities.fragments.fragment_calificaciones;
+import uach.arquitectura.segaapp.activities.fragments.fragment_faltas;
+import uach.arquitectura.segaapp.activities.fragments.fragment_horario;
 
 public class MenuAct extends ActionBarActivity implements ActionBar.TabListener {
 
@@ -39,7 +40,6 @@ public class MenuAct extends ActionBarActivity implements ActionBar.TabListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -132,11 +132,11 @@ public class MenuAct extends ActionBarActivity implements ActionBar.TabListener 
 
                 }
                 case 1:{
-                    return new fragment_faltas();
+                    return new fragment_calificaciones();
                 }
 
                 case 2:{
-                    return new fragment_calificaciones();
+                    return new fragment_faltas();
                 }
             }
 

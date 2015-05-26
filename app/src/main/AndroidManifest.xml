@@ -24,6 +24,10 @@
             android:name=".activities.menu"
             android:label="@string/title_activity_menu" >
         </activity>
+        <activity
+            android:name=".activities.HorarioDiaAct"
+            android:label="@string/title_activity_horario_dia" >
+        </activity>
     </application>
 
 </manifest>

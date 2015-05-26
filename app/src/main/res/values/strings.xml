@@ -9,4 +9,5 @@
     <string name="title_section1">Horario</string>
     <string name="title_section2">Calificaciones</string>
     <string name="title_section3">Faltas</string>
+    <string name="title_activity_horario_dia">HorarioDiaAct</string>
 </resources>

@@ -1,4 +1,4 @@
-package uach.arquitectura.segaapp.activities;
+package uach.arquitectura.segaapp.activities.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,12 +11,12 @@ import uach.arquitectura.segaapp.R;
 /**
  * Created by Edgar on 25/05/2015.
  */
-public class fragment_horario extends Fragment {
+public class fragment_faltas extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_horario, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_faltas, container, false);
         return rootView;
     }
 }
