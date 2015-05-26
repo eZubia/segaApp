@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import uach.arquitectura.segaapp.R;
 
-public class LoginAct extends ActionBarActivity {
+public class loginAct extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,10 @@ public class LoginAct extends ActionBarActivity {
             public void onClick(View v) {
                 String Matricula = ((EditText) findViewById(R.id.txtMatricula)).getText().toString();       //Creamos variables para
                 String Contrasenia = ((EditText) findViewById(R.id.txtContrasenia)).getText().toString();   //gardar valores de
-                                                                                                            //matricula y contraseña.
 
                 if( Matricula.equals("admin") && Contrasenia.equals("admin"))
                 {
-                    Intent OpenMenu = new Intent(LoginAct.this,MenuAct.class);
+                    Intent OpenMenu = new Intent(loginAct.this,MenuAct.class);
                     startActivity(OpenMenu);
                 }
                 else
