@@ -8,21 +8,18 @@ package uach.arquitectura.segaapp.models;
  */
 public class Alumno {
 
-    int matricula;
-    String nombre;
-    String apellidoP;
-    String apellidoM;
-    String carrera;
-    String contrasena;
+    private Integer matricula;
+    private String nombre;
+    private String apellidoPaterno;
+    private String apellidoMaterno;
+    private String password;
 
-    public Alumno() {
-    }
 
-    public int getMatricula() {
+    public Integer getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(Integer matricula) {
         this.matricula = matricula;
     }
 
@@ -34,35 +31,27 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public String getApellidoP() {
-        return apellidoP;
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
     }
 
-    public void setApellidoP(String apellidoP) {
-        this.apellidoP = apellidoP;
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
     }
 
-    public String getApellidoM() {
-        return apellidoM;
+    public String getApellidoMaterno() {
+        return apellidoMaterno;
     }
 
-    public void setApellidoM(String apellidoM) {
-        this.apellidoM = apellidoM;
+    public void setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
     }
 
-    public String getCarrera() {
-        return carrera;
+    public String getPassword() {
+        return password;
     }
 
-    public void setCarrera(String carrera) {
-        this.carrera = carrera;
-    }
-
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
