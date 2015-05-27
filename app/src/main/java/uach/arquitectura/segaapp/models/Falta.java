@@ -10,36 +10,10 @@ import java.sql.ResultSet;
  */
 public class Falta {
 
-    String claveMateria;
-    int matriculaAlumno;
-    int cantidadFaltas;
-
-    public Falta(){
-    }
-
-    public String getClaveMateria() {
-        return claveMateria;
-    }
-
-    public void setClaveMateria(String claveMateria) {
-        this.claveMateria = claveMateria;
-    }
-
-    public int getMatriculaAlumno() {
-        return matriculaAlumno;
-    }
-
-    public void setMatriculaAlumno(int matriculaAlumno) {
-        this.matriculaAlumno = matriculaAlumno;
-    }
-
-    public int getCantidadFaltas() {
-        return cantidadFaltas;
-    }
-
-    public void setCantidadFaltas(int cantidadFaltas) {
-        this.cantidadFaltas = cantidadFaltas;
-    }
+    private Integer id_falta;
+    private Integer catidad;
+    private Integer matricula;
+    private Integer clave_materia;
 
     /**
      * Metodo que retornara las faltas por alumno en un resultset.
@@ -50,5 +24,37 @@ public class Falta {
     public ResultSet getFaltasAlumno(String sql, Integer matricula){
         ResultSet rs = null;
         return rs;
+    }
+
+    public Integer getId_falta() {
+        return id_falta;
+    }
+
+    public void setId_falta(Integer id_falta) {
+        this.id_falta = id_falta;
+    }
+
+    public Integer getCatidad() {
+        return catidad;
+    }
+
+    public void setCatidad(Integer catidad) {
+        this.catidad = catidad;
+    }
+
+    public Integer getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(Integer matricula) {
+        this.matricula = matricula;
+    }
+
+    public Integer getClave_materia() {
+        return clave_materia;
+    }
+
+    public void setClave_materia(Integer clave_materia) {
+        this.clave_materia = clave_materia;
     }
 }

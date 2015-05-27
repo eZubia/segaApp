@@ -22,26 +22,30 @@ public class LogIn extends ActionBarActivity {
     EditText texMatricula;
     EditText textContrasena;
     Button btnEntrar;
-    Alumno alumno;
+    Alumno alumno = new Alumno();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in);
+        alumno.setMatricula(1234);
+                setContentView(R.layout.activity_log_in);
         texMatricula = (EditText) findViewById(R.id.txtMatricula);
         textContrasena = (EditText) findViewById(R.id.txtContrasena);
         btnEntrar = (Button) findViewById(R.id.btnEntrar);
+
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
                 try{
-                    Boolean b = verificarUsuario(texMatricula.getText().toString(), textContrasena.getText().toString());
-                    if(b) {
+                 Boolean b = verificarUsuario(texMatricula.getText().toString(), textContrasena.getText().toString());
+                if(b) {
                     Intent OpenMenu = new Intent(LogIn.this, MenuAct.class);
+                        OpenMenu.putExtra("matricula",alumno.getMatricula().toString());
                     startActivity(OpenMenu);
-                    }
+                  }
                 }catch(NullPointerException e){
                     Toast.makeText(getApplicationContext(), "Error de identificacion", Toast.LENGTH_LONG).show();
                 }
@@ -108,7 +112,7 @@ public class LogIn extends ActionBarActivity {
         @Override
         protected String doInBackground(Void... arg0) {
             String valor = ReadJSON.leerJSON(String.format(
-                    "/%s/%s", user,
+                    "/login/%s/%s", user,
                     password));
 
             return valor;

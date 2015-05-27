@@ -2,6 +2,7 @@ package uach.arquitectura.segaapp.activities;
 
 import java.util.Locale;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,7 @@ public class MenuAct extends ActionBarActivity implements ActionBar.TabListener 
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
+    String matricula;
     SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
@@ -36,10 +38,14 @@ public class MenuAct extends ActionBarActivity implements ActionBar.TabListener 
      */
     ViewPager mViewPager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        Intent intento = this.getIntent();
+        matricula = intento.getStringExtra("matricula");
+        System.out.println(matricula);
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -125,18 +131,26 @@ public class MenuAct extends ActionBarActivity implements ActionBar.TabListener 
 
         @Override
         public Fragment getItem(int position) {
+            Bundle bundle= new Bundle();
+            bundle.putString("matricula",matricula);
             switch(position){
 
                 case 0:{
+
                     return new fragment_horario();
 
                 }
                 case 1:{
-                    return new fragment_calificaciones();
+                    fragment_calificaciones fragcal = new fragment_calificaciones();
+                    fragcal.setArguments(bundle);
+                    return fragcal;
+
                 }
 
                 case 2:{
-                    return new fragment_faltas();
+                    fragment_faltas fragfal = new fragment_faltas();
+                    fragfal.setArguments(bundle);
+                    return fragfal;
                 }
             }
 

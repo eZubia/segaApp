@@ -13,7 +13,7 @@ import java.net.URL;
 public class ReadJSON {
 
     //Direccion ip de la computadora que es el servidor en ese momento
-    public static String ip ="http://192.168.1.67:9000/login";
+    public static String ip ="http://192.168.1.100:9000";
 
     /**
      * Metodo que 
